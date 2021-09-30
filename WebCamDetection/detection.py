@@ -20,8 +20,6 @@ CHECKPOINT_PATH = MODEL_PATH + '/mobilnet_ssd_human_to_emoji/'
 CUSTOM_MODEL_NAME = 'mobilnet_ssd_human_to_emoji'
 
 
-
-
 @tf.function
 def detect_fn(image, detection_model):
     image, shapes = detection_model.preprocess(image)
@@ -66,7 +64,7 @@ def overlay_transparent(background, overlay, x, y):
 
 def choose_emoji(classe, category_index) -> object:
     emoji = category_index[classe + 1]['name']
-    return cv2.imread(emoji + ".png", -1)
+    return cv2.imread("emojis_img/"+emoji + ".png", -1)
 
 
 def main():
@@ -142,13 +140,13 @@ def main():
 
         if len(faces) > 0:
             (x, y, w, h) = faces[0]
-            emoji = cv2.imread("Head.png", -1)
+            emoji = cv2.imread("emojis_img/Head.png", -1)
             emoji = cv2.resize(emoji, (250, 250))
             image_np_with_detections = overlay_transparent(image_np_with_detections, emoji,
                                                            x - 125 + int(abs(w) / 2),
                                                            y - 125 + int(abs(h) / 2))
 
-        cv2.imshow('object detection', image_np_with_detections)
+        cv2.imshow('Daoud to Emoji', image_np_with_detections)
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             cap.release()
