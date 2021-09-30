@@ -1,6 +1,7 @@
 # Human to Emoji
 
 Détection de gestes transformés en emojis en temps réel à la webcam 
+Il s'agit d'une amélioration de mon précédent projet "TraductionEmojiWebcam"
 
 ![Alt Text](https://github.com/DaoudKAD/HumanToEmoji/blob/master/resultat.gif)
 
