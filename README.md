@@ -2,6 +2,8 @@
 
 Détection de gestes transformés en emojis en temps réel à la webcam 
 
+![Alt Text](https://github.com/DaoudKAD/HumanToEmoji/blob/master/resultat.gif)
+
 ### Installation
 
 - Cloner le repos : 
