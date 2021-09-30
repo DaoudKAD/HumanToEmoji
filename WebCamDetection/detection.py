@@ -10,15 +10,12 @@ import tensorflow as tf
 RACINE = "/Users/daoud.kadoch/PycharmProjects/HumanToEmoji/"
 WORKSPACE_PATH = RACINE + "Tensorflow/workspace"
 SCRIPTS_PATH = RACINE + "Tensorflow/scripts"
-APIMODEL_PATH = RACINE + "Tensorflow/models"
 ANNOTATION_PATH = WORKSPACE_PATH + '/annotations'
-IMAGE_PATH = "/Users/daoud.kadoch/Documents/HumanToEmoji_dataset"
 MODEL_PATH = WORKSPACE_PATH + '/models'
 PRETRAINED_MODEL_PATH = WORKSPACE_PATH + '/pre-trained-models'
 CONFIG_PATH = MODEL_PATH + '/mobilnet_ssd_human_to_emoji/pipeline.config'
 CHECKPOINT_PATH = MODEL_PATH + '/mobilnet_ssd_human_to_emoji/'
 CUSTOM_MODEL_NAME = 'mobilnet_ssd_human_to_emoji'
-
 
 @tf.function
 def detect_fn(image, detection_model):
